@@ -1,0 +1,33 @@
+<app-navbar-cliente></app-navbar-cliente>
+
+<div class="container-fluid">
+  <div class="card">
+    <div class="card-header">
+      <h3 class="text-center text-dark">PRESTAMOS</h3>
+    </div>
+    <div class="card-body text-center table-responsive">
+
+      <table *ngIf="pedidosRegistrados.length > 0" class="table table-striped">
+        <thead>
+          <tr>
+            <th>CODIGO</th>
+            <th>USUARIO</th>
+            <th>FECHA DE PRESTAMO</th>
+            <th>FECHA DE DEVOLUCION</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let libro of pedidosRegistrados">
+            <td>{{libro.isbn}}</td>
+            <td>{{libro.usuario}}</td>
+            <td>{{libro.fechaPrestamo}}</td>
+            <td>{{libro.fechaDevolucion}}</td>
+          </tr>
+        </tbody>
+      </table>
+      <div *ngIf="pedidosRegistrados.length == 0" class="row mt5">
+        <h5>No hay Prestamos Registrados</h5>
+      </div>
+    </div>
+  </div>
+</div>

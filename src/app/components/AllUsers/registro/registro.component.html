@@ -1,0 +1,143 @@
+<section class="vh-100" style="background-color: #cc6714;">
+    <div class="container py-5 h-100">
+        <div class="d-flex justify-content-center h-100">
+            <div class="col col-xl-10">
+                <div class="card" style="border-radius: 1rem; max-height: 700px;">
+
+                    <div class="card-header text-center">
+                        <h3 class="header text-dark">REGISTRO</h3>
+                        <span class="h6 fw-bold mb-0 text-center"></span>
+                    </div>
+                   
+                        <div class="col-md-6 col-lg-12 d-flex">
+                            <div class="card-body text-black ">
+                                <form [formGroup]="registrar" (ngSubmit)="registro()">
+
+                                    <label for="nombre"></label>
+                                    <div class="form-group">
+                                        <span class="col-md-1 col-md-offset-2 text-center"><i
+                                                class="fa fa-user bigicon"></i></span>
+                                        <div class="col-md-8">
+
+                                            <input id="nombre" formControlName="nombre" type="text"
+                                                placeholder="Nombres" class="form-control">
+                                            <span
+                                                *ngIf="registrar.get('nombre')?.invalid && registrar.get('nombre')?.touched"
+                                                class="text-danger">
+                                               Campo requerido
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <label for="apellido"></label>
+
+                                    <div class="form-group">
+                                        <span class="col-md-1 col-md-offset-2 text-center"><i
+                                                class="fa fa-user bigicon"></i></span>
+                                        <div class="col-md-8">
+                                            <input id="apellido" formControlName="apellido" type="text"
+                                                placeholder="Apellido de Usuario" class="form-control">
+                                            <span
+                                                *ngIf="registrar.get('apellido')?.invalid && registrar.get('apellido')?.touched"
+                                                class="text-danger">
+                                                Campo requerido
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <label for="cc"></label>
+
+                                    <div class="form-group">
+                                        <span class="col-md-1 col-md-offset-2 text-center"><i
+                                                class="fa fa-user bigicon"></i></span>
+                                        <div class="col-md-8">
+                                            <input id="cc" formControlName="cc" type="number"
+                                                placeholder="Cedula de Usuario" class="form-control">
+                                            <span *ngIf="registrar.get('cc')?.invalid && registrar.get('cc')?.touched"
+                                                class="text-danger">
+                                                Campo requerido
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <label for="direccion"></label>
+
+                                    <div class="form-group">
+                                        <span class="col-md-1 col-md-offset-2 text-center"><i
+                                                class="fa fa-user bigicon"></i></span>
+                                        <div class="col-md-8">
+                                            <input id="direccion" formControlName="direccion" type="text"
+                                                placeholder="Direccion de Usuario" class="form-control">
+                                            <span
+                                                *ngIf="registrar.get('direccion')?.invalid && registrar.get('direccion')?.touched"
+                                                class="text-danger">
+                                                Campo requerido
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <label for="telefono"></label>
+
+                                    <div class="form-group">
+                                        <span class="col-md-1 col-md-offset-2 text-center"><i
+                                                class="fa fa-user bigicon"></i></span>
+                                        <div class="col-md-8">
+                                            <input id="telefono" formControlName="telefono" type="number"
+                                                placeholder="Telefono de Usuario" class="form-control">
+                                            <span
+                                                *ngIf="registrar.get('telefono')?.invalid && registrar.get('telefono')?.touched"
+                                                class="text-danger">
+                                                Campo requerido
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <label for="email"></label>
+
+                                    <div class="form-group">
+                                        <span class="col-md-1 col-md-offset-2 text-center"><i
+                                                class="fa fa-user bigicon"></i></span>
+                                        <div class="col-md-8">
+                                            <input id="user" formControlName="user" type="text"
+                                                placeholder="Ingrese un Usuario" class="form-control">
+                                            <span
+                                                *ngIf="registrar.get('user')?.invalid && registrar.get('user')?.touched"
+                                                class="text-danger">
+                                                Campo requerido
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <label for="password"></label>
+
+                                    <div class="form-group">
+                                        <span class="col-md-1 col-md-offset-2 text-center"><i
+                                                class="fa fa-user bigicon"></i></span>
+                                        <div class="col-md-8">
+                                            <input id="password" formControlName="password" type="password"
+                                                placeholder="Contraseña de Usuario" class="form-control">
+                                            <span
+                                                *ngIf="registrar.get('direccion')?.invalid && registrar.get('password')?.touched"
+                                                class="text-danger">
+                                                Campo requerido
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <label for=""></label>
+                                    <div class="form-group">
+                                        <div class="pt-0 mb-4">
+                                            <button type="submit" class="btn btn-dark btn-lg btn-primary"
+                                                [disabled]="registrar.invalid">Registrar</button>
+                                        </div>
+                                    </div>
+                                    
+                                </form>
+                                <div class="row g-0 ">
+                                    <div class="col-md-6 col-lg-5 d-none d-md-block">
+                                        <div class="col-md-6 col-lg-10 d-flex p-0">
+                                            <p class="mb-5 pb-lg-2" style="color: #e09900;"><a
+                                                routerLink="/" class="btn btn-success">Inicio De Sesion</a></p>
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

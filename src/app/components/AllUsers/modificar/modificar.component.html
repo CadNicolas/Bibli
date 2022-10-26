@@ -1,0 +1,139 @@
+<app-navbar-cliente></app-navbar-cliente>
+<section class="vh-100" style="background-color: #313436;">
+    <div class="container py-5 h-100">
+        <div class="d-flex justify-content-center h-100">
+            <div class="col col-xl-10">
+                <div class="card" style="border-radius: 1rem; max-height: 700px;">
+
+                    <div class="card-header text-center">
+                        <h3 class="header text-dark">Modificar Datos</h3>
+                    </div>
+                    <div class="row g-0 ">
+                       
+                        <div class="col-md-6 col-lg-12 d-flex">
+                            <div class="card-body text-black ">
+                                <form [formGroup]="modificar" (ngSubmit)="registro()">
+
+                                    <label for="nombre"></label>
+                                    <div class="form-group">
+                                        <span class="col-md-1 col-md-offset-2 text-center"><i
+                                                class="fa fa-user bigicon"></i></span>
+                                        <div class="col-md-8">
+
+                                            <input id="nombre" formControlName="nombre" type="text"
+                                                placeholder="Ingrese su nombre" class="form-control">
+                                            <span
+                                                *ngIf="modificar.get('nombre')?.invalid && modificar.get('nombre')?.touched"
+                                                class="text-danger">
+                                                Campo requerido
+                                            </span>
+                                        </div>
+                                    </div>
+                                    
+                                    <label for="apellido"></label>
+
+                                    <div class="form-group">
+                                        <span class="col-md-1 col-md-offset-2 text-center"><i
+                                                class="fa fa-user bigicon"></i></span>
+                                        <div class="col-md-8">
+                                            <input id="apellido" formControlName="apellido" type="text"
+                                                placeholder="Apellido de Usuario" class="form-control">
+                                            <span
+                                                *ngIf="modificar.get('apellido')?.invalid && modificar.get('apellido')?.touched"
+                                                class="text-danger">
+                                                Campo requerido
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <label for="cc"></label>
+
+                                    <div class="form-group">
+                                        <span class="col-md-1 col-md-offset-2 text-center"><i
+                                                class="fa fa-user bigicon"></i></span>
+                                        <div class="col-md-8">
+                                            <input id="cc" formControlName="cc" type="number"
+                                                placeholder="Cedula de Usuario" class="form-control">
+                                            <span *ngIf="modificar.get('cc')?.invalid && modificar.get('cc')?.touched"
+                                                class="text-danger">
+                                                Campo requerido
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <label for="direccion"></label>
+
+                                    <div class="form-group">
+                                        <span class="col-md-1 col-md-offset-2 text-center"><i
+                                                class="fa fa-user bigicon"></i></span>
+                                        <div class="col-md-8">
+                                            <input id="direccion" formControlName="direccion" type="text"
+                                                placeholder="Direccion de Usuario" class="form-control">
+                                            <span
+                                                *ngIf="modificar.get('direccion')?.invalid && modificar.get('direccion')?.touched"
+                                                class="text-danger">
+                                                Campo requerido
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <label for="telefono"></label>
+
+                                    <div class="form-group">
+                                        <span class="col-md-1 col-md-offset-2 text-center"><i
+                                                class="fa fa-user bigicon"></i></span>
+                                        <div class="col-md-8">
+                                            <input id="telefono" formControlName="telefono" type="number"
+                                                placeholder="Telefono de Usuario" class="form-control">
+                                            <span
+                                                *ngIf="modificar.get('telefono')?.invalid && modificar.get('telefono')?.touched"
+                                                class="text-danger">
+                                                Campo requerido
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <label for="email"></label>
+
+                                    <div class="form-group">
+                                        <span class="col-md-1 col-md-offset-2 text-center"><i
+                                                class="fa fa-user bigicon"></i></span>
+                                        <div class="col-md-8">
+                                            <input id="email" formControlName="email" type="email"
+                                                placeholder="Email de Usuario" class="form-control">
+                                            <span
+                                                *ngIf="modificar.get('email')?.invalid && modificar.get('email')?.touched"
+                                                class="text-danger">
+                                                Campo requerido
+                                            </span>
+                                        </div>
+                                    </div>
+                                   
+                                    <label for="password"></label>
+
+                                    <div class="form-group">
+                                        <span class="col-md-1 col-md-offset-2 text-center"><i
+                                                class="fa fa-user bigicon"></i></span>
+                                        <div class="col-md-8">
+                                            <input id="password" formControlName="password" type="password"
+                                                placeholder="Contraseña de Usuario" class="form-control">
+                                            <span
+                                                *ngIf="modificar.get('direccion')?.invalid && modificar.get('password')?.touched"
+                                                class="text-danger">
+                                                Campo requerido
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <label for=""></label>
+                                    <div class="form-group">
+                                        <div class="pt-1 mb-4">
+                                            <button type="submit" class="btn btn-dark btn-lg btn-primary"
+                                                [disabled]="modificar.invalid">Modificar</button>
+                                        </div>
+                                    </div>
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
